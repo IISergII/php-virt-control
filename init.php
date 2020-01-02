@@ -1,6 +1,6 @@
 <?php
 	define('PHPVIRTCONTROL_VERSION', '0.1.1');
-	define('PHPVIRTCONTROL_WEBSITE', 'http://www.php-virt-control.org');
+	define('PHPVIRTCONTROL_WEBSITE', 'https://libvirt.org/');
 	define('ENABLE_TRANSLATOR_MODE', true);
 
 	$my_classes = array(
