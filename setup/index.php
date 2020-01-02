@@ -238,7 +238,9 @@
 	}
 	closedir($dh);
 ?>
-				<option value="#get">- <?php echo getString('add-new-language') ?> -</option>
+			<!--	Disable added other language. Site http://www.php-virt-control.org dead.
+					<option value="#get">- <?php echo getString('add-new-language') ?> -</option>
+				-->
 			</select>
 		</td>
 	</tr>
