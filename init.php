@@ -11,31 +11,32 @@
 				'User'
 				);
 
-	require('classes/loggerBase.php');
-	require('classes/Security.php');
-	require('classes/database.php');
+	require_once('classes/loggerBase.php');
+	require_once('classes/Security.php');
+	require_once('classes/database.php');
 
-	$dh = opendir('./classes/layers');
+	$dir = __DIR__ . '/classes/layers/';
+	$dh = opendir($dir);
 	if ($dh) {
 		while (($file = readdir($dh)) !== false) {
 			if ($file[0] != '.') {
-				$fn = './classes/layers/'.$file;
+				$fn = $dir.$file;
 				include($fn);
 			}
 		}
 		closedir($dh);
 	}
 
-	require('classes/graphics.php');
-	require('classes/libvirt.php');
-	require('classes/session.php');
-	require('classes/XmlRPC.php');
-	
-	require('classes/EncryptionKey.php');
-	require('classes/Application.php');
-	require('classes/Connection.php');
-	require('classes/Language.php');
-	require('classes/User.php');
+	require_once('classes/graphics.php');
+	require_once('classes/libvirt.php');
+	require_once('classes/session.php');
+	require_once('classes/XmlRPC.php');
+
+	require_once('classes/EncryptionKey.php');
+	require_once('classes/Application.php');
+	require_once('classes/Connection.php');
+	require_once('classes/Language.php');
+	require_once('classes/User.php');
 
 	/* User permission defines */
 	define('USER_PERMISSION_NODE_INFO', 0x01);
